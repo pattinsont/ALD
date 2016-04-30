@@ -1,0 +1,60 @@
+{
+  "swagger": "2.0",
+  "info": {
+    [...]
+  },
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/projects": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "projects retrieved",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Project"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Project": {
+	
+		"customer": {
+			"type": "string"
+		},
+		"projectName": {
+			"type": "string"
+		},
+		"projectId": {
+			"type": "string"
+		},
+		"estimateId": {
+			"type": "string"
+		},
+		"dealId": {
+			"type": "string"
+		},
+		"quoteId": {
+			"type": "string"
+		},
+		"status": {
+			"type": "string"
+		},
+		"vendorAM": {
+			"type": "string"
+		},
+		"Notes": {
+			"type": "string"
+		}
+	"required": ["customer", "projectName", "projectID"]
+	
+	},
+    }
+  }
